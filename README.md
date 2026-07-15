@@ -6,7 +6,9 @@ QuadFS is an open drone flight controller built from the ground up in embedded C
 
 Every stage of the system is documented and explained so developers can understand how a complete flight controller works, from raw sensor data to stable flight.
 
-<img src="quadfs_flight_controller/assets/quadfs-hover.gif" width="25%">
+<p align="center">
+  <img src="quadfs_flight_controller/assets/quadfs-hover.gif" width="50%">
+</p>
 
 ## Flight Control Pipeline
 
