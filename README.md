@@ -6,7 +6,7 @@ QuadFS is an open drone flight controller built from the ground up in embedded C
 
 Every stage of the system is documented and explained so developers can understand how a complete flight controller works, from raw sensor data to stable flight.
 
-![QuadFS stable hover](assets/quadfs-hover.gif)
+![QuadFS stable hover](quadfs_flight_controller/assets/quadfs-hover.gif)
 
 ## Flight Control Pipeline
 
@@ -245,7 +245,7 @@ Check:
 
 Compare your output with the course video example:
 
-> Video link: [![Watch the QuadFS EKF demonstration](assets/ekf_demo_thumbnail.png)](https://youtu.be/zXPQdfvipLQ)
+> Video link: [![Watch the QuadFS EKF demonstration](quadfs_flight_controller/assets/ekf_demo_thumbnail.png)](https://youtu.be/zXPQdfvipLQ)
 
 ## 8. The quadcopter leans during take-off
 
