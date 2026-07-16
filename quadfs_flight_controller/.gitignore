@@ -30,3 +30,6 @@ Thumbs.db
 # Logs & temp
 *.log
 *.tmp
+
+# Eclipse and STM32CubeIDE workspace metadata
+.metadata/
