@@ -11,15 +11,12 @@ Release/
 # Object and dependency files
 *.o
 *.d
-*.a
 
 # VS Code
 .vscode/
 
 # STM32CubeIDE / CubeMX
 .settings/
-.project
-.cproject
 *.launch
 *.ioc.bak
 

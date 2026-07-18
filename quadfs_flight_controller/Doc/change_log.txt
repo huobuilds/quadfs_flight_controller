@@ -1,3 +1,10 @@
+Firmware version string: "QuadFS v1.1"
+Date: 18-07-2026
+
+- Added prebuilt CMSIS-DSP ARM math library (libarm_cortexM4lf_math.a)
+- Added STM32CubeIDE project files (.project, .cproject)
+- Updated README with build and flash instructions
+
 Firmware version string: "QuadFS v1.0"
 Date: 14-07-2026
 

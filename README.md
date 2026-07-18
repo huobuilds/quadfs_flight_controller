@@ -44,6 +44,55 @@ The firmware is accompanied by a step by step QuadFS course on YouTube.
 
 The course explains how the system is designed, implemented, tested, tuned, and improved so that every part of the flight controller can be understood rather than simply copied.
 
+## Building the Firmware
+
+### Prerequisites
+
+- [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
+- [Git](https://git-scm.com)
+
+### 1. Clone
+
+```bash
+# SSH
+git clone git@github.com:huobuilds/quadfs_flight_controller.git
+
+# HTTPS
+git clone https://github.com/huobuilds/quadfs_flight_controller.git
+```
+
+You can optionally specify a folder name: `git clone <url> my-folder-name`
+
+### 2. Import into STM32CubeIDE
+
+1. **File → Import → General → Existing Projects into Workspace**
+2. Browse to the cloned folder — the project will be detected automatically
+3. Click **Finish**
+
+### 3. Build
+
+Press `Ctrl+B`. A successful build ends with `0 errors` — warnings are expected and can be ignored. Once built, the debug button becomes active.
+
+### 4. Connect the ST-Link
+
+Wire the ST-Link programmer to the Black Pill SWD header:
+
+| ST-Link | Black Pill |
+|---|---|
+| SWDIO | DIO |
+| SWDCLK | CLK |
+| GND | GND |
+| 3.3V | 3.3V |
+
+> Power the board from the ST-Link 3.3V pin only if no other power source is connected. Do not connect 3.3V if the board is already powered via USB.
+
+### 5. Flash
+
+Click the **Debug** button (bug icon) in the toolbar, or go to **Run → Debug**. CubeIDE will flash the firmware and halt at the start of `main()`.
+
+To run without stopping at the breakpoint, click **Resume** (F8) or use **Run → Run** instead of Debug.
+
+
 ## Resources
 
 - [QuadFS Course on YouTube](https://www.youtube.com/playlist?list=PLBTVuKQ1XcVpDQbM3uqsKZsAigoQidbD6)
