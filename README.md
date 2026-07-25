@@ -38,6 +38,12 @@ The repository also contains supporting engineering resources used during develo
 - Debugging notes
 - Test references
 
+- [QuadFS Course on YouTube](https://www.youtube.com/playlist?list=PLBTVuKQ1XcVpDQbM3uqsKZsAigoQidbD6)
+- [Course Details on Notion](https://bit.ly/4u76gaa)
+- [Join the QuadFS Update List](https://forms.gle/EV1pthPxSTT2N7R58)
+- [Follow Huobuilds on Instagram](https://www.instagram.com/huobuilds?igsh=YndnaHF2aGE1b211)
+
+
 ## YouTube Course
 
 The firmware is accompanied by a step by step QuadFS course on YouTube.
@@ -91,14 +97,6 @@ Wire the ST-Link programmer to the Black Pill SWD header:
 Click the **Debug** button (bug icon) in the toolbar, or go to **Run → Debug**. CubeIDE will flash the firmware and halt at the start of `main()`.
 
 To run without stopping at the breakpoint, click **Resume** (F8) or use **Run → Run** instead of Debug.
-
-
-## Resources
-
-- [QuadFS Course on YouTube](https://www.youtube.com/playlist?list=PLBTVuKQ1XcVpDQbM3uqsKZsAigoQidbD6)
-- [Course Details on Notion](https://bit.ly/4u76gaa)
-- [Join the QuadFS Update List](https://forms.gle/EV1pthPxSTT2N7R58)
-- [Follow Huobuilds on Instagram](https://www.instagram.com/huobuilds?igsh=YndnaHF2aGE1b211)
 
 ---
 

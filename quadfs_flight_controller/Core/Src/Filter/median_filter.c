@@ -27,7 +27,7 @@
 
 float median_filter(float vals[5])
 {
-    //5 window median filter, move spikes
+    //5 window median filter, remove spikes
     float a=vals[0], b=vals[1], c=vals[2], d=vals[3], e=vals[4];
 
     CS(a,b); CS(c,d);

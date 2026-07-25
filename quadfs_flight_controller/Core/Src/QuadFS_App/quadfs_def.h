@@ -49,7 +49,7 @@
 
 #define M_PI 3.14159265358979323846f /* pi */
 
-#define  FIRMWARE_VERSION_STRING "QuadFS v1.1"
+#define  FIRMWARE_VERSION_STRING "QuadFS v1.1.1"
 
 #define TO_RAD (M_PI / 180.0f)
 #define TO_DEG (180.0f / M_PI)

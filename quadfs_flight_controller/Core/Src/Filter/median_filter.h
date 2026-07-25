@@ -23,7 +23,7 @@
 #ifndef MEDIAN_FILTER_H_
 #define MEDIAN_FILTER_H_
 
-//5 window median filter, move spikes
+//5 window median filter, remove spikes
 float median_filter(float vals[5]);
 
 #endif

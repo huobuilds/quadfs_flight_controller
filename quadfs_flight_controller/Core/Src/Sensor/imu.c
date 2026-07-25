@@ -69,22 +69,6 @@ int8_t mag_id = 0;
 extern I2C_HandleTypeDef hi2c1;
 
 
-
-#define M_PI 3.14159265358979323846 /* pi */
-
-#define ACCEL_4g 0x08        // +-4g
-#define ACCEL_8g 0x10        // +-8g
-#define GYRO_500dps 0x08     //+-500dps
-#define GYRO_1000dps  0x10   //(1000dps)
-#define RUN_MODE 0x00        // run mode
-#define CUTOFF_HZ 0x06       // DLPF cutoff freq of %5Hz cutoff
-#define UPDATE_HZ 0x07       // update sensor reg. at 125Hz
-#define MAG_PWR_DOWN 0x00    //// Power down magnetometer
-#define ROM_ACCESS_MODE 0x0F ////Enter Fuse ROM access mode
-#define MAG_RES 0x16         // Set magnetometer data resolution to 16bits and mode to continuous mode 2
-#define BYPASS_REG 0x37
-#define BYPASS_EN 0x02
-
 float gyroXnf;
 float gyroYnf;
 float gyroZnf;

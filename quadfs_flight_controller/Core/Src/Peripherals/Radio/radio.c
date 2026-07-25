@@ -29,7 +29,6 @@
 
 extern UART_HandleTypeDef huart1;
 uint8_t ibus[radio_buffer] = {0};
-uint8_t ibus_src[radio_buffer] = {0};
 uint16_t channels[channel_on]; 
 static DMA_HandleTypeDef *radio_hdma_rx = NULL;
 
@@ -85,7 +84,7 @@ uint8_t update_channels(void)
         HAL_UART_DMAStop(&huart1);              /* abort any stuck transfer   */
         __HAL_UART_CLEAR_OREFLAG(&huart1);      /* release the ORE/DMA lock   */
         __HAL_UART_CLEAR_IDLEFLAG(&huart1);
-        HAL_UART_Receive_DMA(&huart1, ibus_src, radio_buffer);
+        HAL_UART_Receive_DMA(&huart1, ibus, radio_buffer);
            /* Disable callbacks because we are polling manually */
         __HAL_DMA_DISABLE_IT(radio_hdma_rx, DMA_IT_HT);
         __HAL_DMA_DISABLE_IT(radio_hdma_rx, DMA_IT_TC);
@@ -110,7 +109,7 @@ void usart_radio_dma_start(void)
 {
     radio_hdma_rx = huart1.hdmarx;
 
-    HAL_UART_Receive_DMA(&huart1, ibus_src, radio_buffer);
+    HAL_UART_Receive_DMA(&huart1, ibus, radio_buffer);
 
     /* Disable callbacks because we are polling manually */
     __HAL_DMA_DISABLE_IT(radio_hdma_rx, DMA_IT_HT);

@@ -57,15 +57,19 @@ void status_monitor_launch()
 
 static void status_monitor(void *pvParameters)
 {
+    uint32_t last_toggle_time = HAL_GetTick();
+    bool first_entry = true;
+
 	// Initialize the xLastWakeTime variable with the current time.
 	xLastWakeTime = xTaskGetTickCount();
 	while (1)
 	{
-         static bool first_entry = true;
+        uint32_t now = HAL_GetTick();
+
         if (quadfs_state == controller_enabled)
         {
             //armed
-            if(first_entry == true){
+            if(first_entry){
                 //armed
                 HAL_GPIO_WritePin(status_led_GPIO_Port, status_led_Pin, GPIO_PIN_SET);// LED ON
                 first_entry = false;
@@ -75,16 +79,13 @@ static void status_monitor(void *pvParameters)
         {   
             //unarmed
             first_entry = true;
-            static uint32_t last_task_time = 0;
 
-            uint32_t now = HAL_GetTick();
-
-            if ((now - last_task_time) >= 100)
-            {
+            if ((now - last_toggle_time) >= 100U)
+            {//one cycle: on 100ms, off 100ms, cycle 200ms, ie 5Hz blink
                 HAL_GPIO_TogglePin(status_led_GPIO_Port, status_led_Pin);
-                last_task_time = now;
+                last_toggle_time += 100U;
             }
-
+            
         }
 
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(tick_time));
@@ -96,4 +97,3 @@ void quadfs_status(enum control_states ctrl_state)
 {
     quadfs_state = ctrl_state;
 }
-
