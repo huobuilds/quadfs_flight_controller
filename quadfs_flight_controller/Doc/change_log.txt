@@ -1,3 +1,13 @@
+Firmware version string: "QuadFS v1.1.1"
+Date: 25-07-2026
+
+- Updated LED toggle
+- Removed redundant ibus_src
+- Rearranged the README
+- Added a paper comment to the iekf implementation
+- Added a wiring guide
+- Removed redundant definitions
+
 Firmware version string: "QuadFS v1.1"
 Date: 18-07-2026
 

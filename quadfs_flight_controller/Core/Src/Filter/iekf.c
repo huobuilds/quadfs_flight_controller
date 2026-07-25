@@ -25,10 +25,14 @@
  ******************************************************************************
  * IEKF  attitude estimator
  * 
+ * 
+ * Based on the iekf algorithm in the paper: 
+ * Using Inertial Sensors for Position and Orientation Estimation
+ * by Manon Kok, Jeroen D. Hol and Thomas B. Schoen
+ * 
  * Design (unchanged): roll and pitch come from an indirect EKF driven by
- * gyro + accelerometer; the magnetometer is fed to the IEKF with a huge
- * variance so it cannot influence roll/pitch.
- *
+ * gyro + accelerometer; 
+ * 
  * CLEANUP CHANGELOG
  *  C1  doubles -> float32. Every double op is a softfloat library call on
  *      the Cortex-M4 FPU (single precision only). sqrt -> sqrtf etc.
